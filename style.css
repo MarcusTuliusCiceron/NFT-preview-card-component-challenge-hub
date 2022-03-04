@@ -1,0 +1,27 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #0d192b;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  height: 600px;
+  width: 350px;
+  padding: 22px;
+  background-color: #14253d;
+  border: solid 1px red;
+}
+
+.card .image {
+  height: 300px;
+  width: 300px;
+}
+/*# sourceMappingURL=style.css.map */

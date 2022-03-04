@@ -1,0 +1,29 @@
+@import "mixin";
+@import "variables";
+
+html{
+    
+    font-size: 100%;
+    box-sizing: border-box;  
+    background-color: $veryDarkBlue1;
+}
+
+*, *::before, *::after { 
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    height: 600px;
+    width: 350px;
+    padding: 22px;
+    background-color: $veryDarkBlue2;
+    border: solid 1px red;
+
+    .image{
+        height: 300px;
+        width: 300px;
+    }
+}
+
