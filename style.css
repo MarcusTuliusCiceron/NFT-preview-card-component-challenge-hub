@@ -3,6 +3,8 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #0d192b;
+  font-family: 'Outfit', sans-serif;
+  color: white;
 }
 
 *, *::before, *::after {
@@ -12,16 +14,169 @@ html {
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 .card {
   height: 600px;
   width: 350px;
   padding: 22px;
+  margin: auto auto;
   background-color: #14253d;
-  border: solid 1px red;
+  border-radius: 10px;
+  bottom: 50%;
+}
+
+.card .box:hover {
+  cursor: pointer;
+}
+
+.card .box:hover .eye {
+  opacity: 1;
 }
 
 .card .image {
+  content: "";
   height: 300px;
   width: 300px;
+  background-image: url(/images/image-equilibrium.jpg);
+  background-position: center;
+  background-size: contain;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.card .image .eye {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  background-color: rgba(0, 255, 247, 0.5);
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.card h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 22px;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+.card h1:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.card .text {
+  font-size: 18px;
+  color: #8bacda;
+  margin-bottom: 25px;
+}
+
+.card .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  line-height: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 1px #2f415b;
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+}
+
+.card .info .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #00fff7;
+}
+
+.card .info .price img {
+  margin-right: 5px;
+}
+
+.card .info .timer {
+  color: #8bacda;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .info .timer img {
+  margin-right: 5px;
+}
+
+.card .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #8bacda;
+}
+
+.card .author .circle {
+  height: 37px;
+  width: 37px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.card .author .circle img {
+  height: 35px;
+  width: 35px;
+}
+
+.card .author strong {
+  color: white;
+  font-weight: 400;
+}
+
+.card .author strong:hover {
+  color: #00fff7;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

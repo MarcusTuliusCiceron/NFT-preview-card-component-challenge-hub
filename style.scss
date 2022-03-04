@@ -6,6 +6,10 @@ html{
     font-size: 100%;
     box-sizing: border-box;  
     background-color: $veryDarkBlue1;
+    font-family: 'Outfit', sans-serif;
+    color: $white;
+    
+    
 }
 
 *, *::before, *::after { 
@@ -13,17 +17,122 @@ html{
     margin: 0;
     padding: 0;
 }
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+}
 
 .card{
     height: 600px;
     width: 350px;
     padding: 22px;
+    margin: auto auto;
     background-color: $veryDarkBlue2;
-    border: solid 1px red;
-
+    
+    border-radius: 10px;
+    bottom: 50%;
+    //transform: translateY(50%);
+    .box{
+        &:hover{
+            cursor: pointer;
+            .eye{
+                opacity: 1;
+            }
+        }
+    }
     .image{
+        content: "";
         height: 300px;
         width: 300px;
+        background-image: url(/images/image-equilibrium.jpg);
+        background-position: center;
+        background-size: contain;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        .eye{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: $cyant;
+            opacity: 0;
+            transition: opacity 300ms ease-in-out;
+        } 
+    }
+    h1{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 22px;
+        transition: color 300ms ease-in-out;
+        &:hover{
+            color: $cyan;
+            cursor: pointer;
+        }
+    }
+    .text{
+        font-size: 18px;
+        color: $softBlue;
+        margin-bottom: 25px;
+    }
+    .info{
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 1;
+        align-items: center;
+        border-bottom: solid 1px $veryDarkBlue3;
+        padding-bottom: 25px;
+        margin-bottom: 15px;
+        .price{
+            display: flex;
+            align-items: center;
+            color: $cyan;
+            img{
+                margin-right: 5px;
+            }
+            
+        }
+        .timer{
+            color: $softBlue;
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 5px;
+            }
+        }
+    }
+    .author{
+        display: flex;
+        align-items: center;
+        color: $softBlue;
+        .circle{
+            height: 37px;
+            width: 37px;
+            background-color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            img{
+                height: 35px;
+                width: 35px;
+                
+            }
+        }
+        strong{
+            color: white;
+            font-weight: 400;
+            &:hover{
+                color: $cyan;
+                cursor: pointer;
+            }
+        }
+        
     }
 }
 
